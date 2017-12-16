@@ -1,17 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/bg"
     tools:context="com.magesh.techquiz.MainActivity">
-
-    <TextView
-        android:layout_width="wrap_content"
+<TextView
+    android:id="@+id/Tv_title"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="50dp"
+    android:text="Tech Quiz"
+    android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+    android:textStyle="bold"
+    android:textSize="48sp"
+    android:fontFamily="@font/alex"
+    android:textAlignment="center"
+    android:textColor="@color/text"/>
+    <EditText
+        android:layout_margin="16dp"
+        android:layout_below="@+id/Tv_title"
+        android:id="@+id/et_username"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"
+        android:hint="Email"
+        android:textColorHint="@color/text"
+        android:textColor="@color/text"
+        android:drawableLeft="@drawable/ic_user"
+        android:drawablePadding="15dp"
+        android:drawableStart="@drawable/ic_user"
+        />
 
-</android.support.constraint.ConstraintLayout>
+    <EditText
+        android:textColorHint="@color/text"
+        android:layout_margin="16dp"
+        android:id="@+id/et_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"
+        android:hint="PassWord"
+        android:textColor="@color/text"
+        android:layout_below="@+id/et_username"
+        android:drawableLeft="@drawable/ic_key"
+        android:drawableStart="@drawable/ic_key"
+        android:drawablePadding="15dp"/>
+
+    <Button
+        android:id="@+id/bt_login"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et_password"
+        android:layout_marginBottom="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginTop="25dp"
+        android:background="@color/youtube"
+        android:text="LOGIN"
+        android:textColor="@color/text"
+        android:textAppearance="@style/TextAppearance.AppCompat.Widget.TextView.SpinnerItem" />
+</RelativeLayout>
